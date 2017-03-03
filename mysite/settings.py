@@ -25,7 +25,7 @@ SECRET_KEY = 'j8gsj-byge+c9d#60+n^tywoz7)e60%55-clw1&g$&zr0r54xg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ceremy.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
