@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.utils import timezone
-from .models import Post
+
+# View'lar buraya yazılacak.
 def post_list(request):
-     Post.objects.filter(yayinlanma_tarihi__lte=timezone.now()).order_by('yayinlanma_tarihi')
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    return render(request, 'blog/post_list.html', {})
