@@ -1,29 +1,19 @@
-<div>
-     <h1><a href="/">Django Girls Blog</a></h1>
-</div>
+{% load staticfiles %}
 
-{% for post in posts %}
-    <div>
-        <p>published: {{ post.yayinlanma_tarihi }}</p>
-        <h1><a href="">{{ post.baslik }}</a></h1>
-        <p>{{ post.yazi|linebreaks }}</p>
-    </div>
-{% endfor %}
-            <p>Fotogrametrinin en önemli uygulama alanı topoğrafyadır. Fotogrametrinin burada sağladığı gelişme; ölçme ve değerlendirmelerin hızlanması, fotogrametrik olarak çizilmiş tesfiye eğrilerinin, bilhassa nokta nokta çalışan yöntemlerin genellikle daha az verimli oldukları,kırıklı ve oldukça eğimli arazilerde hassasiyet ve şekle uygunluklarının sağlanmasıdır. Yeryüzünün en zor arazi biçimlerinin oldukça iyi bir doğrulukla tesfiye eğrileriyle yansıtılması topoğrafya ve aynı şekilde kartoğrafya alanında alanında önemli bir ilerleme ifade eder.
-        <div>
-            <p>published: 14.06.2014, 12:20</p>
-            <h2><a href="">İkinci gönderim</a></h2>
-            <p>Uygulama alanına göre bir sınıflandırma yapılacak olursa :
-1. Fotogrametrinin topoğrafik kısmı, 
-2. Fotogrametrinin topoğrafik olmayan kısmı,olarak iki şekilde incelenir. 
-Topoğrafik olmayan fotogrametri ise kendi içinde
-1. Yersel fotogrametri 
-2. Yakın resim fotogrametrisi 
-a. Mimarlık fotgrametrisi 
-b. Blastereometre fotogrametrisi 
-c. Endüstri fotogrametrisi 
-3. Farklı ortamlar fotogrametrisi 
-4. Röntgen fotogrametrisi </p>
-        </div>
-    </body>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+  <div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+  </div>
+  {% for post in posts %}
+  <div>
+    <p>published: {{ post.yayinlanma_tarihi }}</p>
+    <h1><a href="">{{ post.baslik }}</a></h1>
+    <p>{{ post.yazi|linebreaks }}</p>
+  </div>
+  {% endfor %}
+</body>
 </html>
